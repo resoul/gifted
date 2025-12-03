@@ -270,29 +270,28 @@ const Hero = () => {
             <div className="text-center text-muted-foreground text-sm font-medium">Trusted by many of musicians</div>
           </motion.div>
 
-          {/* Hero Video Dialog */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-            className="relative max-w-5xl mx-auto"
-          >
-            {mounted && (
-              <HeroVideoDialog
-                trigger={
-                  <div className="bg-indigo-600/10 dark:bg-indigo-300/10 backdrop-blur-md rounded-full p-4 shadow-lg">
-                    <div className="bg-background rounded-full p-3 shadow-lg">
-                      <Play className="size-6 text-indigo-600 dark:text-indigo-400 fill-indigo-600 dark:fill-indigo-400 ml-0.5" />
-                    </div>
-                  </div>
-                }
-                animationStyle="from-center"
-                videoSrc="https://www.youtube.com/embed/VIbMn0QHBlw?si=uV9MFOqt6dmBs0vW"
-                thumbnailSrc={resolvedTheme === 'dark' ? '/screens/2.png' : '/screens/5.png'}
-                thumbnailAlt="Product Demo"
-              />
-            )}
-          </motion.div>
+          {/*<motion.div*/}
+          {/*  initial={{ opacity: 0, y: 30 }}*/}
+          {/*  animate={{ opacity: 1, y: 0 }}*/}
+          {/*  transition={{ duration: 0.8, delay: 0.8 }}*/}
+          {/*  className="relative max-w-5xl mx-auto"*/}
+          {/*>*/}
+          {/*  {mounted && (*/}
+          {/*    <HeroVideoDialog*/}
+          {/*      trigger={*/}
+          {/*        <div className="bg-indigo-600/10 dark:bg-indigo-300/10 backdrop-blur-md rounded-full p-4 shadow-lg">*/}
+          {/*          <div className="bg-background rounded-full p-3 shadow-lg">*/}
+          {/*            <Play className="size-6 text-indigo-600 dark:text-indigo-400 fill-indigo-600 dark:fill-indigo-400 ml-0.5" />*/}
+          {/*          </div>*/}
+          {/*        </div>*/}
+          {/*      }*/}
+          {/*      animationStyle="from-center"*/}
+          {/*      videoSrc="https://www.youtube.com/embed/VIbMn0QHBlw?si=uV9MFOqt6dmBs0vW"*/}
+          {/*      thumbnailSrc={resolvedTheme === 'dark' ? '/screens/2.png' : '/screens/5.png'}*/}
+          {/*      thumbnailAlt="Product Demo"*/}
+          {/*    />*/}
+          {/*  )}*/}
+          {/*</motion.div>*/}
         </div>
       </div>
     </section>

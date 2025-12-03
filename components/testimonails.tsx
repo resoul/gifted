@@ -9,64 +9,64 @@ import Image from 'next/image';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Sarah Chen',
-      role: 'CEO, TechStart',
-      content: 'Metronic transformed our operations. 300% growth in 6 months!',
+      name: 'Liam Carter',
+      role: 'Digital Marketer',
+      content: 'This service is amazing! I sent a personalized track to my friend, and it made their whole week. Super easy and super thoughtful.',
       avatar: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=100&h=100&fit=crop&crop=face'
     },
     {
-      name: 'Marcus Johnson',
-      role: 'CTO, InnovateLab',
-      content: 'Best decision we made. The AI features are game-changing.',
-      avatar: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face'
-    },
-    {
-      name: 'Emily Rodriguez',
-      role: 'Founder, GrowthCo',
-      content: 'Incredible platform. Our team productivity increased by 250%.',
-      avatar: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=100&h=100&fit=crop&crop=face'
-    },
-    {
-      name: 'David Kim',
-      role: 'VP, ScaleUp Inc',
-      content: 'Seamless integration, powerful analytics. Highly recommend!',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face'
-    },
-    {
-      name: 'Lisa Thompson',
-      role: 'CMO, BrandForward',
-      content: 'The automation features saved us 40 hours per week.',
-      avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face'
-    },
-    {
-      name: 'Alex Martinez',
-      role: 'Director, FutureFlow',
-      content: 'Outstanding support and features. Perfect for scaling.',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'
-    },
-    {
-      name: 'Jennifer Park',
-      role: 'Product Manager, InnovateX',
-      content: 'The user experience is exceptional. Our customers love it.',
+      name: 'Ava Mitchell',
+      role: 'UX Designer',
+      content: 'I love how unique the gifted tracks are. It feels like giving someone a piece of emotion in music form.',
       avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face'
     },
     {
-      name: 'Michael Brown',
-      role: 'Head of Operations, ScaleTech',
-      content: 'Reduced our operational costs by 40% while improving efficiency.',
+      name: 'Noah Bennett',
+      role: 'Software Engineer',
+      content: 'Fast, simple, and creative. I’ve already gifted three tracks, and every time the reaction was priceless.',
+      avatar: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=100&h=100&fit=crop&crop=face'
+    },
+    {
+      name: 'Sophia Harris',
+      role: 'Freelance Photographer',
+      content: 'Beautiful experience! The track felt so personal, like it was made just for my friend’s story.',
+      avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face'
+    },
+    {
+      name: 'Ethan Brooks',
+      role: 'Startup Founder',
+      content: 'Perfect for surprising someone. The music quality is incredible, and the whole idea is very refreshing.',
+      avatar: 'https://images.unsplash.com/photo-1764069415137-756fbca30a17?w=100&h=100&fit=crop&crop=face'
+    },
+    {
+      name: 'Mia Collins',
+      role: 'Content Creator',
+      content: 'My audience loved the track I gifted to a fan. It’s such a cool way to show appreciation.',
+      avatar: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face'
+    },
+    {
+      name: 'Oliver Scott',
+      role: 'Product Manager',
+      content: 'I didn’t expect the music to be this good. It felt premium and meaningful—great service..',
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'
+    },
+    {
+      name: 'Isabella Reed',
+      role: 'Event Planner',
+      content: 'I used this service for a birthday surprise, and everyone was emotional. It added magic to the moment.',
+      avatar: 'https://images.unsplash.com/photo-1763757321139-e7e4de128cd9?w=100&h=100&fit=crop&crop=face'
+    },
+    {
+      name: 'James Parker',
+      role: 'Music Teacher',
+      content: 'As someone in music, I can say the craftsmanship is great. The gifted track carried real emotion.',
       avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face'
     },
     {
-      name: 'Rachel Green',
-      role: 'CTO, InnovateLab',
-      content: 'The analytics dashboard gives us insights we never had before.',
-      avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face'
-    },
-    {
-      name: 'John Doe',
-      role: 'CEO, TechStart',
-      content: 'The analytics dashboard gives us insights we never had before.',
-      avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face'
+      name: 'Harper Lewis',
+      role: 'Copywriter',
+      content: 'A truly memorable gift. The storytelling through sound was beautiful—highly recommend!',
+      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face'
     }
   ];
 
@@ -106,12 +106,11 @@ const Testimonials = () => {
           </CustomBadge>
 
           <CustomTitle>
-            Loved by Thousands
+            Loved by Many
           </CustomTitle>
           
           <CustomSubtitle>
-            Discover why users love Metronic and join today to experience its 
-            transformative power for your business.
+            Discover why users love Gifted Emotions and join today to our family.
           </CustomSubtitle>
         </motion.div>
       </div>
