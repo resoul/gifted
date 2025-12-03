@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="svg477" x="0px" y="0px" viewBox="0 0 192.6 27.2" style="enable-background:new 0 0 192.6 27.2;">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+
+<g>
+	<polygon class="st0" points="59.1,8.4 65.5,8.4 65.5,25.7 70.3,25.7 70.3,8.4 76.7,8.4 76.7,4.2 59.1,4.2"/>
+	<rect x="91.3" y="4.2" class="st0" width="4.9" height="21.5"/>
+	<polygon class="st0" points="183.1,21.5 183.1,4.2 178.1,4.2 178.1,25.7 191.6,25.7 191.6,21.5"/>
+	<path class="st0" d="M151.1,4.2l-9,21.5h5.3l1.6-4.3h9.1l1.6,4.3h5.4l-8.9-21.5H151.1z M150.3,17.6l3.2-8.4l3.2,8.4H150.3z"/>
+	<rect x="2.8" y="2.8" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -3.0261 7.3056)" class="st0" width="8.9" height="8.9"/>
+	<polygon class="st0" points="26.2,7.3 19.9,1 13.6,7.3 19.9,13.6 13.6,19.9 19.9,26.2 26.2,19.9 19.9,13.6 26.2,7.3 32.5,13.6 &#xA;		38.8,7.3 32.5,1"/>
+	<path class="st0" d="M120.6,4.2h-8v21.5h8.3c5.7,0,11.4-3.7,11.4-10.8C132.3,7.3,126.5,4.2,120.6,4.2z M120.4,21.5h-3.1V8.4h3.2&#xA;		c4,0,6.7,2.6,6.7,6.5C127.3,18.9,124.5,21.5,120.4,21.5z"/>
+</g>
+</svg>
