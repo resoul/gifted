@@ -18,10 +18,10 @@ export default function Page() {
 			<Header />
       <Hero />
       <TrustedBrands />
-      <HowItWorks />
-      <Features />
+      {/*<HowItWorks />*/}
+      {/*<Features />*/}
       <Testimonials />
-      <Pricing />
+      {/*<Pricing />*/}
       <FAQ />
       <CallToAction />
       <Contact />
