@@ -21,7 +21,7 @@ const Pricing = () => {
       monthlyPrice: '$29',
       yearlyPrice: '$290',
       period: isYearly ? '/year' : '/month',
-      description: 'Perfect for small teams getting started',
+      description: 'Perfect to start',
       features: [
         'Up to 5 team members',
         '10GB storage',
@@ -37,7 +37,7 @@ const Pricing = () => {
       monthlyPrice: '$99',
       yearlyPrice: '$990',
       period: isYearly ? '/year' : '/month',
-      description: 'Ideal for growing businesses',
+      description: 'Ideal for family',
       features: [
         'Up to 25 team members',
         '100GB storage',
@@ -90,7 +90,7 @@ const Pricing = () => {
           </CustomTitle>
           
           <CustomSubtitle className="mb-10">
-            Choose the perfect plan for your business. 
+            Choose the perfect plan for you.
             <br />
             All plans include a 14-day free trial.
           </CustomSubtitle>
@@ -111,7 +111,7 @@ const Pricing = () => {
               </ToggleGroupItem>
               <ToggleGroupItem 
                 value="yearly" 
-                className="cursor-pointer flex items-center rounded-lg text-sm font-medium px-6 py-2 data-[state=on]:bg-background data-[state=on]:shadow-sm flex items-center gap-2"
+                className="cursor-pointer flex items-center rounded-lg text-sm font-medium px-6 py-2 data-[state=on]:bg-background data-[state=on]:shadow-sm gap-2"
               >
                 Yearly
                 <Badge variant="outline" className="leading-0 rounded-sm px-1 py-0.5 text-[11px] bg-indigo-100 border-indigo-100 text-indigo-700 dark:text-indigo-200 dark:bg-indigo-950/50 dark:border-indigo-950/50 font-semibold">
