@@ -1,0 +1,63 @@
+// i am - 588857471
+// gifted - -1003114197160
+
+curl -s -X POST https://api.telegram.org/bot8440671672:AAGTPxDVHItFeWSDFexPXW51dIMcIJrhuQY/sendMessage \
+-d chat_id=-1003114197160 \
+-d text="https://giftedemotions.netlify.app"
+
+curl -s -X POST https://api.telegram.org/bot8440671672:AAGTPxDVHItFeWSDFexPXW51dIMcIJrhuQY/sendMessage \
+-d chat_id=-1003114197160 \
+-d text="и закрепляю а то вы старые еще забудите, йоу"
+
+curl -X POST "https://api.telegram.org/bot8440671672:AAGTPxDVHItFeWSDFexPXW51dIMcIJrhuQY/pinChatMessage" \
+  -d "chat_id=-1003114197160" \
+  -d "message_id=118"
+
+curl -X POST "https://api.telegram.org/bot8440671672:AAGTPxDVHItFeWSDFexPXW51dIMcIJrhuQY/editMessageText" \
+  -d "chat_id=-1003114197160" \
+  -d "message_id=117" \
+  -d "text=братюни давайте просыпайтесь для вас тема есть, а то сидите пердите, го сюда"
+
+
+curl -X POST "https://api.telegram.org/bot8440671672:AAGTPxDVHItFeWSDFexPXW51dIMcIJrhuQY/setMessageReaction" \
+  -H "Content-Type: application/json" \
+  -d '{"chat_id": -1003114197160, "message_id": 118, "reaction": [{"type": "emoji", "emoji": "🔥"}], "is_big": false}'
+
+// https://api.telegram.org/bot8440671672:AAGTPxDVHItFeWSDFexPXW51dIMcIJrhuQY/getUpdates
+
+// https://giftedemotions.netlify.app
+
+create or replace function public.send_telegram_notification()
+returns trigger
+language plpgsql
+security definer
+as $$
+declare
+    api_url text;
+    message_text text;
+    payload jsonb;
+begin
+    api_url := 'https://api.telegram.org/bot8440671672:AAGTPxDVHItFeWSDFexPXW51dIMcIJrhuQY/sendMessage';
+    message_text := '🔥 *НОВОЕ СООБЩЕНИЕ* 🔥' || chr(10) || chr(10) ||
+                    '👤 *Имя*: ' || NEW.name || chr(10) ||
+                    '📧 *Email*: ' || NEW.email || chr(10) ||
+                    '💡 *Тема*: ' || NEW.subject || chr(10) ||
+                    '📝 *Сообщение*:' || chr(10) || NEW.message;
+
+    payload := jsonb_build_object(
+        'chat_id', '-1003114197160',
+        'text', message_text,
+        'parse_mode', 'Markdown'
+    );
+
+    perform supabase_functions.http_request(
+        api_url,
+        'POST',
+        '{"Content-Type":"application/json"}',
+        payload::text,
+        '5000'
+    );
+
+    return NEW;
+end;
+$$;

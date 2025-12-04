@@ -12,61 +12,61 @@ const Testimonials = () => {
       name: 'Liam Carter',
       role: 'Digital Marketer',
       content: 'This service is amazing! I sent a personalized track to my friend, and it made their whole week. Super easy and super thoughtful.',
-      avatar: 'https://images.unsplash.com/photo-1649972904349-6e44c42644a7?w=100&h=100&fit=crop&crop=face'
+      avatar: '/avatars/liam.webp'
     },
     {
       name: 'Ava Mitchell',
       role: 'UX Designer',
       content: 'I love how unique the gifted tracks are. It feels like giving someone a piece of emotion in music form.',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop&crop=face'
+      avatar: '/avatars/ava.webp'
     },
     {
       name: 'Noah Bennett',
       role: 'Software Engineer',
       content: 'Fast, simple, and creative. I’ve already gifted three tracks, and every time the reaction was priceless.',
-      avatar: 'https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=100&h=100&fit=crop&crop=face'
+      avatar: '/avatars/noah.webp'
     },
     {
       name: 'Sophia Harris',
       role: 'Freelance Photographer',
       content: 'Beautiful experience! The track felt so personal, like it was made just for my friend’s story.',
-      avatar: 'https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?w=100&h=100&fit=crop&crop=face'
+      avatar: '/avatars/sophia.webp'
     },
     {
       name: 'Ethan Brooks',
       role: 'Startup Founder',
       content: 'Perfect for surprising someone. The music quality is incredible, and the whole idea is very refreshing.',
-      avatar: 'https://images.unsplash.com/photo-1764069415137-756fbca30a17?w=100&h=100&fit=crop&crop=face'
+      avatar: '/avatars/ethan.webp'
     },
     {
       name: 'Mia Collins',
       role: 'Content Creator',
       content: 'My audience loved the track I gifted to a fan. It’s such a cool way to show appreciation.',
-      avatar: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=100&h=100&fit=crop&crop=face'
+      avatar: '/avatars/mia.webp'
     },
     {
       name: 'Oliver Scott',
       role: 'Product Manager',
-      content: 'I didn’t expect the music to be this good. It felt premium and meaningful—great service..',
-      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face'
+      content: 'I didn’t expect the music to be this good. It felt premium and meaningful—great service.',
+      avatar: '/avatars/oliver.webp'
     },
     {
       name: 'Isabella Reed',
       role: 'Event Planner',
       content: 'I used this service for a birthday surprise, and everyone was emotional. It added magic to the moment.',
-      avatar: 'https://images.unsplash.com/photo-1763757321139-e7e4de128cd9?w=100&h=100&fit=crop&crop=face'
+      avatar: '/avatars/isabella.webp'
     },
     {
       name: 'James Parker',
       role: 'Music Teacher',
       content: 'As someone in music, I can say the craftsmanship is great. The gifted track carried real emotion.',
-      avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop&crop=face'
+      avatar: '/avatars/james.webp'
     },
     {
       name: 'Harper Lewis',
       role: 'Copywriter',
       content: 'A truly memorable gift. The storytelling through sound was beautiful—highly recommend!',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop&crop=face'
+      avatar: '/avatars/harper.webp'
     }
   ];
 
