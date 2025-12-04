@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { Cable, ChartNoAxesCombined, Cog, CloudUpload } from 'lucide-react';
-import Image from "next/image";
 
 const HowItWorks = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -84,7 +83,11 @@ const HowItWorks = () => {
   return (
     <section id="how-it-works" className="py-24 border-b border-border/50">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-center flex-col text-center gap-5 mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }} className="flex items-center justify-center flex-col text-center gap-5 mb-16">
           <CustomBadge>
             Easy to Use
           </CustomBadge>
@@ -96,9 +99,15 @@ const HowItWorks = () => {
           <CustomSubtitle>
             Our streamlined process gets you up and running quickly, with powerful AI doing the heavy lifting.
           </CustomSubtitle>
-        </div>
+        </motion.div>
 
-        <div className="flex flex-col gap-12 max-w-6xl mx-auto">
+        {/* Main Content Grid */}
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="flex flex-col gap-12 max-w-6xl mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {steps.map((step, index) => (
               <div
@@ -119,12 +128,20 @@ const HowItWorks = () => {
                 <div className="w-full h-0.5 bg-border/60"> 
                   <AnimatePresence>
                     {index === activeStep && (
-                      <div className="h-0.5 w-full overflow-hidden">
-                        <div
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3, ease: "easeInOut" }}
+                        className="h-0.5 w-full overflow-hidden"
+                      >
+                        {/* Progress Bar - moved to bottom */}
+                        <motion.div
                           className="h-0.5 bg-gradient-to-r from-indigo-500 to-purple-400"
                           style={{ width: `${progress}%` }}
+                          transition={{ duration: 0.05, ease: "linear" }}
                         />
-                      </div>
+                      </motion.div>
                     )}
                   </AnimatePresence> 
                 </div>
@@ -135,15 +152,21 @@ const HowItWorks = () => {
           {/* Right Side - Fading Images */}
           <div className="relative w-full rounded-xl overflow-hidden border border-border shadow-xs shadow-black/5 bg-background">
             <div className="max-h-[50vh] overflow-hidden">
-                <img
-                    key={activeStep}
-                    src={steps[activeStep].image}
-                    alt={`${steps[activeStep].title} visualization`}
-                    className="w-full h-full object-cover"
-                />
+            <AnimatePresence mode="wait">
+              <motion.img
+                key={activeStep}
+                src={steps[activeStep].image}
+                alt={`${steps[activeStep].title} visualization`}
+                className="w-full h-full object-cover"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.5, ease: "easeInOut" }}
+              />
+            </AnimatePresence>
             </div>
           </div>
-        </div>
+        </motion.div>
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
