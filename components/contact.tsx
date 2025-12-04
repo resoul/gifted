@@ -15,6 +15,7 @@ import { CustomBadge } from '@/components/custom/badge';
 import { CustomSubtitle } from '@/components/custom/subtitle';
 import { CustomTitle } from '@/components/custom/title';
 import Link from 'next/link';
+import { supabase } from "@/lib/supabaseClient";
 
 const formSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -38,12 +39,17 @@ const Contact = () => {
 
   const onSubmit = async () => {
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast("Message sent!. Thank you for your message. We'll get back to you soon.");
-    
+    const values = form.getValues()
+
+      const { error } = await supabase
+          .from("contacts")
+          .insert(values)
+          .select();
+
+    if (error === null) {
+        toast("Message sent!. Thank you for your message. We'll get back to you soon.");
+    }
+
     form.reset();
     setIsSubmitting(false);
   };
@@ -52,7 +58,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: 'Email',
-      content: 'hello@kt.com',
+      content: 'hello@gifted.com',
     },
     {
       icon: Phone,
