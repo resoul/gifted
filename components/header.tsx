@@ -11,7 +11,7 @@ import { Button } from '@/components/ui/button';
 
 const Header = () => {
   // const navItems = ['Home', 'Features', 'Pricing', 'FAQ', 'Contact'];
-  const navItems = ['Home', 'FAQ', 'Contact'];
+  const navItems = ['Home', 'How It Works', 'Features', 'FAQ', 'Contact'];
 
   const { resolvedTheme, setTheme } = useTheme();
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,8 +33,7 @@ const Header = () => {
         return;
       }
 
-      // Track active section based on scroll position
-      const sections = ['features', 'how-it-works', 'pricing', 'faq', 'contact'];
+      const sections = ['how-it-works', 'features', 'faq', 'contact'];
       const scrollPosition = window.scrollY + 200;
       for (const section of sections) {
         const element = document.getElementById(section);
@@ -63,7 +62,7 @@ const Header = () => {
         behavior: 'smooth' 
       });
     } else {
-      const targetId = item.toLowerCase().replace(' ', '-');
+      const targetId = item.toLowerCase().replaceAll(' ', '-');
       const element = document.getElementById(targetId);
       if (element) {
         element.scrollIntoView({ 
@@ -77,8 +76,8 @@ const Header = () => {
   const isActiveItem = (item: string) => {
     const sectionMap: { [key: string]: string } = {
       'Home': 'home',
+        'How It Works': 'how-it-works',
       'Features': 'features',
-      'Pricing': 'pricing',
       'FAQ': 'faq',
       'Contact': 'contact'
     };

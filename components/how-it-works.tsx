@@ -17,30 +17,30 @@ const HowItWorks = () => {
   const steps = [
     {
       id: 1,
-      title: "Connect Your Data",
-      description: "Seamlessly integrate your existing tools and data sources.",
-      image: "/screens/4.png",
+      title: "Chose track",
+      description: "Chose your track. Or let us create exclusive track for you. Our library is growing by the day.",
+      image: "/screens/test.png",
       icon: Cable
     },
     {
       id: 2,
-      title: "AI-Powered Analysis",
-      description: "Our advanced AI algorithms analyze your data patterns.",
-      image: "/screens/5.png",
+      title: "Record audio message",
+      description: "Use your micro to record your audio message. Then we combine your track & your message. Add your picture for Album cover.",
+      image: "/screens/test.png",
       icon: ChartNoAxesCombined
     },
     {
       id: 4,
       title: "Configure & Optimize",
-      description: "Launch your optimized solution and watch it scale automatically.",
-      image: "/screens/3.png",
+      description: "Launch your track.",
+      image: "/screens/test.png",
       icon: Cog
     },
     {
       id: 5,
-      title: "Deploy & Scale",
-      description: "Launch your optimized solution and watch it scale automatically.",
-      image: "/screens/4.png",
+      title: "Done",
+      description: "Get lifetime access to your track in all major streaming platforms.",
+      image: "/screens/test.png",
       icon: CloudUpload
     },
   ];
@@ -81,16 +81,15 @@ const HowItWorks = () => {
   };
 
   return (
-    <section className="py-24 border-b border-border/50">
+    <section id="how-it-works" className="py-24 border-b border-border/50">
       <div className="container mx-auto px-6">
-        {/* Header */}
         <motion.div 
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }} className="flex items-center justify-center flex-col text-center gap-5 mb-16">
           <CustomBadge>
-            Easy Setup
+            Easy to Use
           </CustomBadge>
 
           <CustomTitle>
@@ -109,7 +108,6 @@ const HowItWorks = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
           className="flex flex-col gap-12 max-w-6xl mx-auto">
-          {/* Left Side - Step Navigation */}
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             {steps.map((step, index) => (
               <div

@@ -16,16 +16,16 @@ export default function Page() {
 	return (
 		<div className="min-h-screen">
 			<Header />
-      <Hero />
-      <TrustedBrands />
-      {/*<HowItWorks />*/}
-      {/*<Features />*/}
-      <Testimonials />
-      {/*<Pricing />*/}
-      <FAQ />
-      <CallToAction />
-      <Contact />
-      <Footer />
+            <Hero />
+            <TrustedBrands />
+            <HowItWorks />
+            <Features />
+            <Testimonials />
+            <Pricing />
+            <FAQ />
+            <CallToAction />
+            <Contact />
+            <Footer />
 		</div>		
 	);
 }
