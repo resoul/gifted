@@ -8,7 +8,6 @@ import Features from '@/components/features';
 import Testimonials from '@/components/testimonails';
 import Pricing from '@/components/pricing';
 import FAQ from '@/components/faq';
-import CallToAction from '@/components/call-to-action';
 import Contact from '@/components/contact';
 import Footer from '@/components/footer';
 
@@ -23,7 +22,6 @@ export default function Page() {
             <Testimonials />
             <Pricing />
             <FAQ />
-            <CallToAction />
             <Contact />
             <Footer />
 		</div>		

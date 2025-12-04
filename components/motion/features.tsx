@@ -1,4 +1,5 @@
 
+import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { CustomBadge } from '@/components/custom/badge';
 import { CustomTitle } from '@/components/custom/title';
@@ -77,7 +78,11 @@ const Features = () => {
     return (
         <section id="features" className="py-24 bg-background border-b border-border/50">
             <div className="container mx-auto px-6">
-                <div  className="flex items-center justify-center flex-col text-center gap-5 mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }} className="flex items-center justify-center flex-col text-center gap-5 mb-16">
                     <CustomBadge>
                         Key Features
                     </CustomBadge>
@@ -90,12 +95,20 @@ const Features = () => {
                         Our platform provides all the tools and features you need to build, scale,
                         and optimize your business operations efficiently.
                     </CustomSubtitle>
-                </div>
+                </motion.div>
 
                 {/* Features Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     {features.map((feature, index) => (
-                        <div key={feature.id} className="group">
+                        <motion.div
+                            key={feature.id}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5, delay: index * 0.1 }}
+                            viewport={{ once: true }}
+                            whileHover={{ y: -8 }}
+                            className="group"
+                        >
                             <Card className={cn('h-full bg-background border border-border transition-all duration-500 p-8 relative overflow-hidden hover:shadow-lg', feature.colors.hover)}>
                                 <CardContent className="p-0">
                                     {/* Header */}
@@ -130,7 +143,7 @@ const Features = () => {
                                 {/* Subtle gradient overlay on hover */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-slate-50/0 to-slate-100/0 group-hover:from-slate-50/30 group-hover:to-slate-100/10 dark:from-slate-900/0 dark:to-slate-800/0 transition-all duration-500 pointer-events-none" />
                             </Card>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

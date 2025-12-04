@@ -85,7 +85,9 @@ const Header = () => {
   };
 
   return (
-    <header
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
       className={cn(
         'fixed top-0 left-0 right-0 z-40 transition-all duration-300', 
         isScrolled ? 'bg-background/60 backdrop-blur-sm shadow-xs' : 'bg-transparent'
@@ -95,11 +97,16 @@ const Header = () => {
         <Logo />
         
         <div className="flex items-center gap-2.5">
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
+            {/* Nav items */}
             {navItems.map((item, index) => (
-              <button
+              <motion.button
                 key={item}
                 onClick={() => handleNavClick(item)}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: (index + 2) * 0.1 }}
                 className={cn(
                   'cursor-pointer transition-colors relative group',
                   isActiveItem(item)
@@ -113,7 +120,7 @@ const Header = () => {
                     isActiveItem(item) ? 'w-full' : 'w-0 group-hover:w-full'
                   }`}
                 ></span>
-              </button>
+              </motion.button>
             ))}
             
             <Button variant="default">
@@ -121,6 +128,7 @@ const Header = () => {
             </Button>
           </nav>
 
+          {/* Mobile Navigation */}
           <div className="md:hidden flex items-center space-x-4">
             <Drawer open={isOpen} onOpenChange={setIsOpen}>
               <DrawerTrigger asChild>
@@ -154,6 +162,7 @@ const Header = () => {
             </Drawer>
           </div>
 
+          {/* Theme Toggle */}
           {mounted && (
             <Button className="cursor-pointer text-muted-foreground hover:bg-transparent hover:text-foreground" variant="ghost" size="icon" onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}>
               {resolvedTheme === 'dark' ? <Sun className="size-4"/> : <Moon className="size-4"/>}
@@ -161,7 +170,7 @@ const Header = () => {
           )}
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

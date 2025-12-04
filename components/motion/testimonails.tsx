@@ -1,4 +1,5 @@
 
+import { motion } from 'framer-motion';
 import Marquee from "@/components/ui/marquee";
 import { CustomBadge } from '@/components/custom/badge';
 import { CustomTitle } from '@/components/custom/title';
@@ -95,7 +96,11 @@ const Testimonials = () => {
     <section className="py-24 bg-background overflow-hidden border-b border-border/50">
       <div className="container mx-auto px-6 lg:px-12 mb-16">
         {/* Header */}
-        <div className="flex items-center justify-center flex-col text-center gap-5 mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }} className="flex items-center justify-center flex-col text-center gap-5 mb-16">
           <CustomBadge>
             Testimonials
           </CustomBadge>
@@ -107,11 +112,17 @@ const Testimonials = () => {
           <CustomSubtitle>
             Discover why users love Gifted Emotions and join today to our family.
           </CustomSubtitle>
-        </div>
+        </motion.div>
       </div>
 
       <div className="w-full mx-auto px-6">
-        <div className="relative flex w-full flex-col items-center justify-center overflow-hidden gap-1.5 mx-auto">
+        <motion.div 
+          className="relative flex w-full flex-col items-center justify-center overflow-hidden gap-1.5 mx-auto"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+         >
           <Marquee pauseOnHover className="[--duration:40s] grow">
             {firstColumn.map((testimonial, index) => (
               <TestimonialCard key={index} testimonial={testimonial} />
@@ -124,7 +135,7 @@ const Testimonials = () => {
           </Marquee>
           <div className="pointer-events-none absolute inset-y-0 start-0 w-1/12 bg-gradient-to-r from-background"></div>
           <div className="pointer-events-none absolute inset-y-0 end-0 w-1/12 bg-gradient-to-l from-background"></div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
