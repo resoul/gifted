@@ -21,42 +21,42 @@ const Hero = () => {
       name: "Vence",
       designation: "Music Engineer",
       image:
-        "https://i.scdn.co/image/ab6761610000e5ebcc68cda40a55e1b291d5a5ec",
+        "/music/vence.webp",
     },
     {
       id: 2,
       name: "resoul.ua",
       designation: "Music Producer",
       image:
-        "https://i.scdn.co/image/ab67616100005174b2435adc82d7e24ba9ac3308",
+        "/music/resoul.webp",
     },
     {
       id: 3,
       name: "Soul Recordings",
       designation: "Music Label",
       image:
-        "/music/ddb529f8-2121-45ff-8be4-368ad67449a4.jpg",
+        "/music/soul.webp",
     },
     {
       id: 4,
       name: "V&R Recordings",
       designation: "Music Label",
       image:
-        "/music/vr.jpg",
+        "/music/vr.webp",
     },
     {
       id: 8,
       name: "Airlance Music",
       designation: "Music Label",
       image:
-        "/music/logo.png",
+        "/music/a.webp",
     },  
     {
       id: 5,
       name: "I Was There",
       designation: "Music Band",
       image:
-        "/music/IwasthereLogo.png",
+        "/music/iwasthere.webp",
     },
   ];
 
@@ -286,7 +286,7 @@ const Hero = () => {
                 }
                 animationStyle="from-center"
                 videoSrc="https://www.youtube.com/embed/VIbMn0QHBlw?si=uV9MFOqt6dmBs0vW"
-                thumbnailSrc={resolvedTheme === 'dark' ? '/screens/test.png' : '/screens/test.png'}
+                thumbnailSrc={resolvedTheme === 'dark' ? '/screens/test.webp' : '/screens/test.webp'}
                 thumbnailAlt="Product Demo"
               />
             )}
