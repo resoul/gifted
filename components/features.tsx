@@ -11,8 +11,8 @@ const Features = () => {
         {
             id: 'task-automation',
             icon: Zap,
-            title: 'Lightning Workflows',
-            description: 'Supercharge your daily operations with automation that not only saves time, but intelligently adapts to your evolving business routines..',
+            title: 'Curated Birthday Track Library',
+            description: 'Browse a wide collection of birthday-themed songs across genres and moods.',
             stats: '10x faster',
             metric: 'Speed Increase',
             colors: {
@@ -27,10 +27,11 @@ const Features = () => {
         {
             id: 'workflow-optimization',
             icon: Shield,
-            title: 'Adaptive Safeguards',
-            description: 'Protect your data and streamline processes with real-time AI security, adapting instantly to threats and keeping your operations resilient and confidential.',
+
             stats: '99.9%',
             metric: 'Uptime',
+            title: 'Personalized Audio Message Recording',
+            description: 'Record a heartfelt voice message to accompany the gifted track.',
             colors: {
                 bg: 'bg-red-100/40 dark:bg-red-950/40',
                 icon: 'text-red-600',
@@ -43,8 +44,8 @@ const Features = () => {
         {
             id: 'intelligent-scheduling',
             icon: Users,
-            title: 'Smart Team Sync',
-            description: 'Let AI handle the chaos of calendars and meetings—Smart Team Sync coordinates, schedules, and adapts to your team’s needs, so you can focus on what matters most.',
+            title: 'Release on Streaming Platforms',
+            description: 'Publish your custom birthday track to major streaming services like Spotify, Apple Music, and more.',
             stats: '10k+',
             metric: 'Active Users',
             colors: {
@@ -59,8 +60,8 @@ const Features = () => {
         {
             id: 'ai-analytics',
             icon: BarChart3,
-            title: 'Predictive Insights',
-            description: 'Reveal hidden trends and forecast outcomes with analytics that learn from your unique data, giving you a competitive edge and actionable clarity.',
+            title: 'Customizable Gift Page',
+            description: 'Add photos, text wishes, stickers, and themes to create a unique digital birthday card.',
             stats: '25%',
             metric: 'Growth Boost',
             colors: {
@@ -87,8 +88,8 @@ const Features = () => {
                     </CustomTitle>
 
                     <CustomSubtitle>
-                        Our platform provides all the tools and features you need to build, scale,
-                        and optimize your business operations efficiently.
+                        With just a few taps, the custom birthday track can be shared instantly or even released on major
+                        streaming platforms, turning a simple greeting into a lasting memory.
                     </CustomSubtitle>
                 </div>
 
