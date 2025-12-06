@@ -1,9 +1,5 @@
 
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
-import { CustomBadge } from '@/components/custom/badge';
-import { CustomTitle } from '@/components/custom/title';
-import { CustomSubtitle } from '@/components/custom/subtitle';
-
 import Link from 'next/link'; 
 
 const FAQ = () => {
@@ -46,17 +42,15 @@ const FAQ = () => {
     <section className="py-24 bg-background border-b" id="faq">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-center flex-col text-center gap-5 mb-25">
-          <CustomBadge>
-            FAQ
-          </CustomBadge>
-
-          <CustomTitle>
-            Frequently Asked Questions
-          </CustomTitle>
-          
-          <CustomSubtitle>
-            Got questions? We&apos;ve got answers. Here are the most common questions about our service.
-          </CustomSubtitle>
+            <div className={"py-1 text-indigo-600 font-semibold border-b-2 border-indigo-600 mb-1.5"}>
+                FAQ
+            </div>
+            <h2 className={"leading-6 text-3xl md:text-5xl font-bold text-foreground"}>
+                Frequently Asked Questions
+            </h2>
+            <p className={"text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"}>
+                Got questions? We&apos;ve got answers. Here are the most common questions about our service.
+            </p>
         </div>
 
         <div className="max-w-4xl mx-auto">

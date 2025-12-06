@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import { Menu } from 'lucide-react';
 import { RainbowButton } from '@/components/magicui/rainbow-button';
 import { Drawer, DrawerTitle, DrawerContent, DrawerTrigger } from '@/components/ui/drawer';
@@ -10,7 +9,6 @@ import { Sun, Moon } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Header = () => {
-  // const navItems = ['Home', 'Features', 'Pricing', 'FAQ', 'Contact'];
   const navItems = ['Home', 'How It Works', 'Features', 'FAQ', 'Contact'];
 
   const { resolvedTheme, setTheme } = useTheme();

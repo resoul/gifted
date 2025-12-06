@@ -1,8 +1,5 @@
 
 import { Card, CardContent } from '@/components/ui/card';
-import { CustomBadge } from '@/components/custom/badge';
-import { CustomTitle } from '@/components/custom/title';
-import { CustomSubtitle } from '@/components/custom/subtitle';
 import { Zap, Shield, BarChart3, Users } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -79,21 +76,17 @@ const Features = () => {
         <section id="features" className="py-24 bg-background border-b border-border/50">
             <div className="container mx-auto px-6">
                 <div  className="flex items-center justify-center flex-col text-center gap-5 mb-16">
-                    <CustomBadge>
+                    <div className={"py-1 text-indigo-600 font-semibold border-b-2 border-indigo-600 mb-1.5"}>
                         Key Features
-                    </CustomBadge>
-
-                    <CustomTitle>
+                    </div>
+                    <h2 className={"leading-6 text-3xl md:text-5xl font-bold text-foreground"}>
                         Key Features
-                    </CustomTitle>
-
-                    <CustomSubtitle>
+                    </h2>
+                    <p className={"text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"}>
                         With just a few taps, the custom birthday track can be shared instantly or even released on major
                         streaming platforms, turning a simple greeting into a lasting memory.
-                    </CustomSubtitle>
+                    </p>
                 </div>
-
-                {/* Features Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
                     {features.map((feature, index) => (
                         <div key={feature.id} className="group">

@@ -1,14 +1,9 @@
-
-import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group';
 import { Check, Star } from 'lucide-react';
 import { useState } from 'react';
-import { CustomTitle } from './custom/title';
-import { CustomSubtitle } from './custom/subtitle';
-import { CustomBadge } from './custom/badge';
 import { cn } from '@/lib/utils';
 
 const Pricing = () => {
@@ -75,23 +70,19 @@ const Pricing = () => {
   return (
     <section id="pricing" className="py-24 bg-background border-b border-border/50">
       <div className="container mx-auto px-6">
-        {/* Header */}
         <div className="flex items-center justify-center flex-col text-center gap-5">
-          <CustomBadge>
-            Pricing
-          </CustomBadge>
+            <div className={"py-1 text-indigo-600 font-semibold border-b-2 border-indigo-600 mb-1.5"}>
+                Pricing
+            </div>
 
-          <CustomTitle>
-            Simple & Transparent Pricing
-          </CustomTitle>
-          
-          <CustomSubtitle className="mb-10">
-            Choose the perfect plan for you.
-            <br />
-            All plans include a 14-day free trial.
-          </CustomSubtitle>
-
-          {/* Pricing Period Toggle */}
+            <h2 className={"leading-6 text-3xl md:text-5xl font-bold text-foreground"}>
+                Simple & Transparent Pricing
+            </h2>
+            <p className={"text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10"}>
+                Choose the perfect plan for you.
+                <br />
+                All plans include a 14-day free trial.
+            </p>
           <div className="flex items-center justify-center mb-18">
             <ToggleGroup
               type="single"

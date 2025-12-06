@@ -10,9 +10,6 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { toast } from "sonner";
-import { CustomBadge } from '@/components/custom/badge';
-import { CustomSubtitle } from '@/components/custom/subtitle';
-import { CustomTitle } from '@/components/custom/title';
 import Link from 'next/link';
 import { supabase } from "@/lib/supabaseClient";
 
@@ -76,18 +73,16 @@ const Contact = () => {
       <div className="container mx-auto px-6">
 
         <div className="flex items-center justify-center flex-col text-center gap-5 mb-25">
-          <CustomBadge>
-            Get in Touch
-          </CustomBadge>
-
-          <CustomTitle>
-            Contact Us
-          </CustomTitle>
-          
-          <CustomSubtitle>
-              Ready to connect on a deeper emotional level?
-              Share your thoughts or questions with us, and we&apos;ll be here to respond with sincerity and attention.
-          </CustomSubtitle>
+            <div className={"py-1 text-indigo-600 font-semibold border-b-2 border-indigo-600 mb-1.5"}>
+                Get in Touch
+            </div>
+            <h2 className={"leading-6 text-3xl md:text-5xl font-bold text-foreground"}>
+                Contact Us
+            </h2>
+            <p className={"text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"}>
+                Ready to connect on a deeper emotional level?
+                Share your thoughts or questions with us, and we&apos;ll be here to respond with sincerity and attention.
+            </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">

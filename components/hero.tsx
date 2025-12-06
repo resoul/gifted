@@ -181,7 +181,6 @@ const Hero = () => {
                                         </div>
                                     </div>
                                 }
-                                animationStyle="from-center"
                                 videoSrc="https://www.youtube.com/embed/T8mC2Aq-M-o?si=ET3J8btMT1f6KSPm"
                                 thumbnailSrc={resolvedTheme === 'dark' ? '/screens/test.webp' : '/screens/test.webp'}
                                 thumbnailAlt="Product Demo"

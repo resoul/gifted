@@ -1,13 +1,9 @@
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
 import { useState, useEffect, useRef } from 'react';
-import { CustomBadge } from '@/components/custom/badge';
-import { CustomTitle } from '@/components/custom/title';
-import { CustomSubtitle } from '@/components/custom/subtitle';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { Cable, ChartNoAxesCombined, Cog, CloudUpload } from 'lucide-react';
-import Image from "next/image";
 
 const HowItWorks = () => {
   const [activeStep, setActiveStep] = useState(0);
@@ -46,9 +42,7 @@ const HowItWorks = () => {
     },
   ];
 
-  const stepDuration = 5000; // 8 secon
-  
-  // Auto-advance steps with progress animation
+  const stepDuration = 5000;
   useEffect(() => {
     if (isPaused) return;
   
@@ -85,17 +79,16 @@ const HowItWorks = () => {
     <section id="how-it-works" className="py-24 border-b border-border/50">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-center flex-col text-center gap-5 mb-16">
-          <CustomBadge>
-            Easy to Use
-          </CustomBadge>
+            <div className={"py-1 text-indigo-600 font-semibold border-b-2 border-indigo-600 mb-1.5"}>
+                Easy to Use
+            </div>
 
-          <CustomTitle>
-            How It Works
-          </CustomTitle>
-          
-          <CustomSubtitle>
-            Our streamlined process gets you up and running quickly, with powerful AI doing the heavy lifting.
-          </CustomSubtitle>
+            <h2 className={"leading-6 text-3xl md:text-5xl font-bold text-foreground"}>
+                How It Works
+            </h2>
+            <p className={"text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto"}>
+                Our streamlined process gets you up and running quickly, with powerful AI doing the heavy lifting.
+            </p>
         </div>
 
         <div className="flex flex-col gap-12 max-w-6xl mx-auto">
